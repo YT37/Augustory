@@ -188,40 +188,106 @@ export const testimonials = [
 
 export const ventures = [
   {
+    slug: "helios-grid",
     name: "Helios Grid",
     sector: "Climate · Energy",
     stage: "Series A",
     desc: "Distributed solar orchestration software that balances rooftop generation across neighborhood microgrids.",
+    founded: "2023",
+    hq: "Austin, TX",
+    team: "24",
+    about:
+      "Helios Grid builds the software layer that lets neighborhood-scale solar behave like a single, dispatchable power plant. By orchestrating thousands of rooftop arrays and home batteries in real time, it smooths the duck curve, defers grid upgrades and pays homeowners for the flexibility they provide.",
+    highlights: [
+      "Orchestrates 40MW of distributed generation across 12 utility territories.",
+      "Cuts peak-demand grid stress by up to 30% in pilot neighborhoods.",
+      "Partnered with three regional utilities on virtual power plant programs.",
+    ],
   },
   {
+    slug: "cortex-labs",
     name: "Cortex Labs",
     sector: "Health · AI",
     stage: "Seed",
     desc: "Clinical decision support that turns unstructured patient records into actionable diagnostic signals.",
+    founded: "2024",
+    hq: "Boston, MA",
+    team: "16",
+    about:
+      "Cortex Labs reads the 80% of clinical data that lives in free-text notes, scanned documents and lab narratives, and surfaces the signals clinicians would otherwise miss. It plugs into existing EHRs and flags risk earlier without adding to documentation burden.",
+    highlights: [
+      "Deployed across 4 hospital systems covering 1.2M patient records.",
+      "Surfaces high-risk cases an average of 9 days earlier than baseline.",
+      "HIPAA-compliant, with on-prem and private-cloud deployment options.",
+    ],
   },
   {
+    slug: "loop-logistics",
     name: "Loop Logistics",
     sector: "Supply Chain",
     stage: "Series A",
     desc: "Last-mile route optimization cutting delivery emissions and cost for mid-market retailers.",
+    founded: "2022",
+    hq: "Rotterdam, NL",
+    team: "31",
+    about:
+      "Loop Logistics gives mid-market retailers the last-mile intelligence that was once exclusive to logistics giants. Its routing engine continuously rebalances fleets against traffic, demand and carbon targets, turning delivery from a cost center into a competitive edge.",
+    highlights: [
+      "Reduces last-mile cost per drop by 18% on average.",
+      "Cut delivery emissions by 22% across active fleets.",
+      "Processes 2M+ route optimizations per week.",
+    ],
   },
   {
+    slug: "verdant",
     name: "Verdant",
     sector: "AgTech",
     stage: "Seed",
     desc: "Soil-sensor network and forecasting that helps growers cut water use without losing yield.",
+    founded: "2023",
+    hq: "Fresno, CA",
+    team: "14",
+    about:
+      "Verdant pairs low-cost soil sensors with hyperlocal forecasting so growers irrigate exactly when and where it matters. The result is meaningful water savings on farms that operate on razor-thin margins and increasingly unpredictable weather.",
+    highlights: [
+      "Reduces irrigation water use by up to 25% with no yield loss.",
+      "Network of 9,000+ field sensors across three states.",
+      "Forecasting accuracy within 6% of measured soil moisture.",
+    ],
   },
   {
+    slug: "mintwork",
     name: "Mintwork",
     sector: "Fintech",
     stage: "Pre-seed",
     desc: "Embedded treasury tools that give small businesses enterprise-grade cash management.",
+    founded: "2025",
+    hq: "Singapore",
+    team: "9",
+    about:
+      "Mintwork brings the treasury tooling of large enterprises to small businesses through a single embedded layer. It automates cash positioning, sweeps idle balances into yield and forecasts runway, so founders spend less time in spreadsheets and more time building.",
+    highlights: [
+      "Automates cash management for 600+ small businesses.",
+      "Surfaces an average of 1.4% additional yield on idle balances.",
+      "Integrates with major banks and accounting platforms out of the box.",
+    ],
   },
   {
+    slug: "atlas-learning",
     name: "Atlas Learning",
     sector: "EdTech",
     stage: "Series A",
     desc: "Adaptive upskilling platform partnering with universities to validate workforce credentials.",
+    founded: "2022",
+    hq: "London, UK",
+    team: "28",
+    about:
+      "Atlas Learning works with universities and employers to turn upskilling into verifiable, job-ready credentials. Its adaptive engine personalizes each learner's path while giving institutions the data to prove outcomes that actually move careers.",
+    highlights: [
+      "Partnered with 15+ universities to validate workforce credentials.",
+      "Learners complete programs at 2.3x the industry benchmark rate.",
+      "Credentials accepted by a network of 200+ hiring partners.",
+    ],
   },
 ];
 

@@ -22,6 +22,18 @@
   --line: rgba(255, 255, 255, 0.08);
   --line-strong: rgba(255, 255, 255, 0.16);
 
+  /* elevation fills (themeable) */
+  --elev: rgba(255, 255, 255, 0.05);
+  --elev-soft: rgba(255, 255, 255, 0.025);
+  --card-top: rgba(255, 255, 255, 0.045);
+  --card-bottom: rgba(255, 255, 255, 0.015);
+  --nav-bg: rgba(7, 7, 11, 0.72);
+  --overlay-bg: rgba(14, 14, 22, 0.96);
+  --ghost-bg: rgba(255, 255, 255, 0.02);
+  --ghost-bg-hover: rgba(255, 255, 255, 0.06);
+  --ghost-border-hover: rgba(255, 255, 255, 0.4);
+  --grain-opacity: 0.035;
+
   /* text */
   --text: #f5f5fa;
   --text-soft: #c7c7d6;
@@ -68,6 +80,36 @@
   --font-body: "Figtree", system-ui, sans-serif;
 }
 
+/* ---------- Light theme ----------
+   Re-maps the same tokens; components read variables, so they follow. */
+:root[data-theme="light"] {
+  --bg: #f6f6fb;
+  --bg-2: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #f1f1f6;
+  --line: rgba(14, 14, 28, 0.1);
+  --line-strong: rgba(14, 14, 28, 0.18);
+
+  --elev: rgba(14, 14, 28, 0.04);
+  --elev-soft: rgba(14, 14, 28, 0.025);
+  --card-top: #ffffff;
+  --card-bottom: #fbfbfe;
+  --nav-bg: rgba(255, 255, 255, 0.78);
+  --overlay-bg: rgba(255, 255, 255, 0.97);
+  --ghost-bg: rgba(14, 14, 28, 0.02);
+  --ghost-bg-hover: rgba(14, 14, 28, 0.05);
+  --ghost-border-hover: rgba(14, 14, 28, 0.32);
+  --grain-opacity: 0.02;
+
+  --text: #14141c;
+  --text-soft: #41414f;
+  --muted: #6b6b7b;
+  --faint: #9696a6;
+
+  --shadow-soft: 0 20px 60px -22px rgba(20, 20, 45, 0.18);
+  --shadow-glow: 0 0 80px -10px rgba(224, 36, 154, 0.25);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -108,7 +150,7 @@ body::after {
   position: fixed;
   inset: 0;
   z-index: -1;
-  opacity: 0.035;
+  opacity: var(--grain-opacity);
   pointer-events: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
@@ -208,7 +250,6 @@ h4 {
   font-weight: 600;
   font-size: 0.98rem;
   border: 1px solid transparent;
-  background-clip: padding-box;
   transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease),
     background 0.25s var(--ease), border-color 0.25s var(--ease);
   white-space: nowrap;
@@ -224,6 +265,9 @@ h4 {
   background: var(--spectrum);
   background-size: 160% 160%;
   background-position: 0% 50%;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-clip: border-box;
   font-weight: 700;
 }
 .btn-primary:hover {
@@ -235,11 +279,11 @@ h4 {
 .btn-ghost {
   color: var(--text);
   border-color: var(--line-strong);
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--ghost-bg);
 }
 .btn-ghost:hover {
-  border-color: rgba(255, 255, 255, 0.4);
-  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--ghost-border-hover);
+  background: var(--ghost-bg-hover);
   transform: translateY(-2px);
 }
 
@@ -252,11 +296,7 @@ h4 {
 
 /* ---------- card primitive ---------- */
 .card {
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.045),
-    rgba(255, 255, 255, 0.015)
-  );
+  background: linear-gradient(180deg, var(--card-top), var(--card-bottom));
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   padding: 32px;

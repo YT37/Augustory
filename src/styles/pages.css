@@ -50,7 +50,7 @@
   padding: 7px 14px 7px 8px;
   border: 1px solid var(--line-strong);
   border-radius: var(--radius-pill);
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--elev-soft);
   font-size: 0.85rem;
   color: var(--text-soft);
   margin-bottom: 30px;
@@ -218,7 +218,7 @@
 /* =============== Stats band =============== */
 .stats-band {
   border-block: 1px solid var(--line);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+  background: linear-gradient(180deg, var(--elev-soft), transparent);
 }
 .stats-grid {
   display: grid;
@@ -305,7 +305,7 @@
       rgba(224, 36, 154, 0.18),
       transparent 60%
     ),
-    rgba(255, 255, 255, 0.02);
+    var(--elev-soft);
 }
 .cta::after {
   content: "";
@@ -422,7 +422,7 @@
 }
 .aud-pill.active {
   background: var(--spectrum);
-  background-clip: padding-box;
+  background-origin: border-box;
   color: #fff;
   text-shadow: 0 1px 2px rgba(10, 10, 15, 0.35);
   font-weight: 700;
@@ -520,9 +520,143 @@
   font-size: 0.95rem;
   margin-top: 14px;
 }
+.venture-card .go {
+  margin-top: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+.venture-card:hover .go .arrow {
+  transform: translateX(5px);
+}
+.venture-card .go .arrow {
+  transition: transform 0.25s var(--ease);
+}
 @media (max-width: 900px) {
   .ventures-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* =============== Venture detail =============== */
+.back-link {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 600;
+  margin-bottom: 22px;
+  transition: color 0.2s var(--ease);
+}
+.back-link:hover {
+  color: var(--text);
+}
+.back-link .back-arrow {
+  display: inline-flex;
+  transform: rotate(180deg);
+  transition: transform 0.2s var(--ease);
+}
+.back-link:hover .back-arrow {
+  transform: rotate(180deg) translateX(3px);
+}
+.vd-head {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.vd-head .stage {
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--line-strong);
+  color: var(--text-soft);
+}
+.vd-grid {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+.vd-about p {
+  color: var(--text-soft);
+  font-size: 1.08rem;
+  line-height: 1.7;
+  margin-top: 14px;
+  max-width: 60ch;
+}
+.vd-highlights {
+  list-style: none;
+  margin-top: 16px;
+  display: grid;
+  gap: 14px;
+}
+.vd-highlights li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: var(--text-soft);
+  font-size: 1rem;
+}
+.vd-tick {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  background: var(--spectrum);
+  background-clip: padding-box;
+  color: #fff;
+  margin-top: 1px;
+}
+.vd-tick .arrow {
+  width: 14px;
+  height: 14px;
+}
+.vd-facts {
+  display: grid;
+  gap: 2px;
+  padding: 12px 26px;
+  position: sticky;
+  top: 100px;
+}
+.vd-fact {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+.vd-fact:last-child {
+  border-bottom: none;
+}
+.vd-fact .l {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+.vd-fact .v {
+  font-weight: 600;
+  color: var(--text);
+  text-align: right;
+}
+@media (max-width: 860px) {
+  .vd-grid {
+    grid-template-columns: 1fr;
+  }
+  .vd-facts {
+    position: static;
   }
 }
 
@@ -607,7 +741,7 @@
   color: var(--text);
 }
 .form {
-  background: rgba(255, 255, 255, 0.025);
+  background: var(--elev-soft);
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   padding: 36px;

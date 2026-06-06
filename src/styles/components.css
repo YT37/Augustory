@@ -14,7 +14,7 @@
   border-bottom: 1px solid transparent;
 }
 .nav.scrolled {
-  background: rgba(7, 7, 11, 0.72);
+  background: var(--nav-bg);
   backdrop-filter: blur(18px) saturate(150%);
   border-bottom-color: var(--line);
 }
@@ -57,7 +57,7 @@
 .nav-link:hover,
 .nav-link.active {
   color: var(--text);
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--elev);
 }
 
 /* dropdown */
@@ -79,7 +79,7 @@
 }
 .nav-dd:hover .nav-dd-trigger {
   color: var(--text);
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--elev);
 }
 .nav-dd-trigger svg {
   transition: transform 0.25s var(--ease);
@@ -93,7 +93,7 @@
   left: 50%;
   transform: translateX(-50%) translateY(8px);
   width: 320px;
-  background: rgba(14, 14, 22, 0.96);
+  background: var(--overlay-bg);
   backdrop-filter: blur(20px);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -116,7 +116,7 @@
   transition: background 0.2s;
 }
 .nav-dd-item:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--elev);
 }
 .nav-dd-item strong {
   display: block;
@@ -133,6 +133,25 @@
   display: flex;
   align-items: center;
   gap: 10px;
+}
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--line-strong);
+  background: var(--ghost-bg);
+  color: var(--text-soft);
+  transition: color 0.2s var(--ease), background 0.2s var(--ease),
+    border-color 0.2s var(--ease), transform 0.2s var(--ease);
+}
+.theme-toggle:hover {
+  color: var(--text);
+  background: var(--ghost-bg-hover);
+  border-color: var(--ghost-border-hover);
+  transform: translateY(-1px);
 }
 
 /* mobile */
@@ -165,7 +184,7 @@
   position: fixed;
   inset: 74px 0 0 0;
   z-index: 99;
-  background: rgba(7, 7, 11, 0.98);
+  background: var(--overlay-bg);
   backdrop-filter: blur(20px);
   padding: 24px;
   display: flex;
@@ -218,7 +237,7 @@
 /* ---------------- Footer ---------------- */
 .footer {
   border-top: 1px solid var(--line);
-  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.015));
+  background: linear-gradient(180deg, transparent, var(--elev-soft));
   padding-block: 64px 36px;
   position: relative;
 }

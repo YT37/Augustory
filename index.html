@@ -17,6 +17,13 @@
     <title>Augustory Venture Studio — Build Ventures Faster</title>
     <script>
       document.documentElement.className += " js";
+      // Set theme before paint to avoid a flash of the wrong theme.
+      try {
+        document.documentElement.dataset.theme =
+          localStorage.getItem("theme") || "dark";
+      } catch (e) {
+        document.documentElement.dataset.theme = "dark";
+      }
     </script>
   </head>
   <body>

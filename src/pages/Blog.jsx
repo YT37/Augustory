@@ -1,14 +1,10 @@
+import { Arrow, CtaBand } from "../components/Shared.jsx";
 import { posts } from "../data/content.js";
-import { Arrow, CtaBand, ComingSoon } from "../components/Shared.jsx";
 import useReveal from "../hooks/useReveal.js";
 
 export default function Blog() {
   useReveal("blog");
 
-  // Page temporarily disabled — show "Coming Soon" only.
-  return <ComingSoon />;
-
-  // eslint-disable-next-line no-unreachable
   return (
     <>
       <section className="page-hero">

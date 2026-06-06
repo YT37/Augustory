@@ -1,5 +1,6 @@
+import { Link } from "react-router-dom";
 import { ventures } from "../data/content.js";
-import { CtaBand } from "../components/Shared.jsx";
+import { Arrow, CtaBand } from "../components/Shared.jsx";
 import useReveal from "../hooks/useReveal.js";
 
 export default function Ventures() {
@@ -25,8 +26,9 @@ export default function Ventures() {
         <div className="container">
           <div className="ventures-grid">
             {ventures.map((v, i) => (
-              <div
+              <Link
                 key={v.name}
+                to={`/ventures/${v.slug}`}
                 className="card venture-card reveal"
                 style={{ transitionDelay: `${(i % 3) * 70}ms` }}
               >
@@ -37,7 +39,10 @@ export default function Ventures() {
                 <h3>{v.name}</h3>
                 <div className="sector">{v.sector}</div>
                 <p>{v.desc}</p>
-              </div>
+                <span className="go">
+                  View venture <Arrow />
+                </span>
+              </Link>
             ))}
           </div>
         </div>
