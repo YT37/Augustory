@@ -32,6 +32,8 @@
   --ghost-bg: rgba(255, 255, 255, 0.02);
   --ghost-bg-hover: rgba(255, 255, 255, 0.06);
   --ghost-border-hover: rgba(255, 255, 255, 0.4);
+  --input-bg: rgba(0, 0, 0, 0.3);
+  --input-bg-focus: rgba(0, 0, 0, 0.45);
   --grain-opacity: 0.035;
 
   /* text */
@@ -99,6 +101,8 @@
   --ghost-bg: rgba(14, 14, 28, 0.02);
   --ghost-bg-hover: rgba(14, 14, 28, 0.05);
   --ghost-border-hover: rgba(14, 14, 28, 0.32);
+  --input-bg: #ffffff;
+  --input-bg-focus: #ffffff;
   --grain-opacity: 0.02;
 
   --text: #14141c;

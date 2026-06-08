@@ -21,14 +21,6 @@ export function Arrow() {
   );
 }
 
-export function ComingSoon() {
-  return (
-    <section className="coming-soon">
-      <h1 className="gradient-text">Coming Soon</h1>
-    </section>
-  );
-}
-
 export function CtaBand({
   title = "Ready to build your venture?",
   text = "Choose your path and join a community of innovators, builders and investors.",

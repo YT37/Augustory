@@ -760,7 +760,7 @@
 .field textarea,
 .field select {
   width: 100%;
-  background: rgba(0, 0, 0, 0.3);
+  background: var(--input-bg);
   border: 1px solid var(--line-strong);
   border-radius: 12px;
   padding: 14px 16px;
@@ -768,6 +768,10 @@
   font-family: inherit;
   font-size: 1rem;
   transition: border-color 0.2s, background 0.2s;
+}
+.field select option {
+  background: var(--surface);
+  color: var(--text);
 }
 .field input::placeholder,
 .field textarea::placeholder {
@@ -778,7 +782,7 @@
 .field select:focus {
   outline: none;
   border-color: var(--c-magenta);
-  background: rgba(0, 0, 0, 0.45);
+  background: var(--input-bg-focus);
 }
 .field textarea {
   resize: vertical;

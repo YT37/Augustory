@@ -1,18 +1,13 @@
 import { Link } from "react-router-dom";
+import { CtaBand } from "../components/Shared.jsx";
 import { audiences } from "../data/content.js";
-import { Arrow, CtaBand, ComingSoon } from "../components/Shared.jsx";
 import useReveal from "../hooks/useReveal.js";
-
-// Pages temporarily disabled — show "Coming Soon" only.
-const COMING_SOON = ["entrepreneurs", "investors", "professionals"];
 
 export default function Audience({ slug }) {
   const a = audiences.find((x) => x.slug === slug);
   useReveal(slug);
 
   if (!a) return null;
-
-  if (COMING_SOON.includes(slug)) return <ComingSoon />;
 
   return (
     <>
